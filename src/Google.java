@@ -11,6 +11,7 @@ public class Google
     	System.setProperty("webdriver.chrome.driver", ".\\Software\\chromedriver.exe");
      	WebDriver driver=new ChromeDriver(); // here we are launching the browser
      	driver.get("https://www.google.com/");
+	driver.manage().windows().maximize();
      	Thread.sleep(2000);
      	WebElement search=driver.findElement(By.xpath("//input[@aria-label='Search']"));
      	search.sendKeys("java",Keys.ENTER);
